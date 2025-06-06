@@ -15,6 +15,15 @@ while True: #조건이 True면 계속 작동합니다.
         balance += deposit_amount #balance = balance + deposit_amount #결과를 별도의 저장공간에 담아줘
         print(f'입금하신 금액은 {deposit_amount}원이고, 현재 잔액은 {balance}입니다.')
     
+    #2번 출금 기능
+    if num=='2':
+        withdraw_amount = int(input('출금할 금액  입력햐주새요. : '))
+                # if balance >= withdraw_amount:
+        #balance -= withdraw_amount
+        withdraw_amount = min(balance, withdraw_amount)
+        balance -= withdraw_amount
+        print(f"출금하신 금액은 {withdraw_amount}원이고, 현재 잔액은 {balance}원 입니다.")
+
     #4번 종료 기능 코드
     if num == '4':
         print('종료')
